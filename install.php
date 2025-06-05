@@ -26,7 +26,8 @@ CREATE TABLE tblitems
 name VARCHAR(100) NOT NULL,
 description TEXT,
 allergyinfo VARCHAR(255),
-category VARCHAR(50) FOREIGN KEY,
+category VARCHAR(50),
+FOREIGN KEY (category) REFERENCES categories(category_name)
 available BOOLEAN,
 quantity INT(3) UNSIGNED)"
 );
