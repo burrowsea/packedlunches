@@ -20,9 +20,9 @@ echo("tblusers created");
 
 #categories table
 
-$stmt = $conn->prepare("DROP TABLE IF EXISTS categories
-catname VARCHAR(40)
-");
+$stmt = $conn->prepare("DROP TABLE IF EXISTS categories;
+(catname VARCHAR(40))"
+);
 $stmt->execute();
 $stmt->closeCursor();
 echo("tblcategory created");
