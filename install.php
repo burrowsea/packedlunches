@@ -28,7 +28,7 @@ description TEXT,
 allergyinfo VARCHAR(255),
 category VARCHAR(50) FOREIGN KEY,
 available BOOLEAN,
-quantity TINYINT(3))"
+quantity INT(3))"
 );
 $stmt->execute();
 $stmt->closeCursor();
