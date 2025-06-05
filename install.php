@@ -20,7 +20,16 @@ echo("tblusers created");
 
 ##Create Table for Items
 
-#$stmt = $conn->prepare("DROP TABLE IF EXISTS tblitems;
-#CREATE TABLE tblitems
-#(itemid INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-#name
+$stmt = $conn->prepare("DROP TABLE IF EXISTS tblitems;
+CREATE TABLE tblitems
+(itemid INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+description TEXT,
+allergyinfo VARCHAR(255),
+category VARCHAR(50) FOREIGN KEY,
+available BOOLEAN,
+quantity INT(3))"
+);
+$stmt->execute();
+$stmt->closeCursor();
+echo("tblitema created");
