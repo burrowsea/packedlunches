@@ -21,6 +21,7 @@ echo("tblusers created");
 #categories table
 
 $stmt = $conn->prepare("DROP TABLE IF EXISTS categories;
+CREATE TABLE catagories
 (catname VARCHAR(40))"
 );
 $stmt->execute();
