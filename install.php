@@ -18,6 +18,15 @@ $stmt->execute();
 $stmt->closeCursor();
 echo("tblusers created");
 
+#categories table
+
+$stmt = $conn->prepare("DROP TABLE IF EXISTS categories
+catname VARCHAR(40)
+");
+$stmt->execute();
+$stmt->closeCursor();
+echo("tblcategory created");
+
 ##Create Table for Items
 
 $stmt = $conn->prepare("DROP TABLE IF EXISTS tblitems;
@@ -27,7 +36,7 @@ name VARCHAR(100) NOT NULL,
 description TEXT,
 allergyinfo VARCHAR(255),
 category VARCHAR(50),
-FOREIGN KEY (category) REFERENCES categories(category_name),
+FOREIGN KEY (category) REFERENCES categories(catname),
 available BOOLEAN,
 quantity INT(3) UNSIGNED)"
 );
