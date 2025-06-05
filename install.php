@@ -20,7 +20,7 @@ echo("tblusers created");
 
 ##Create Table for Items
 
-$stmt = $conn->prepare("DROP TABLE IF EXISTS tblitems;
-CREATE TABLE tblitems
-(itemid INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name
+#$stmt = $conn->prepare("DROP TABLE IF EXISTS tblitems;
+#CREATE TABLE tblitems
+#(itemid INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+#name
