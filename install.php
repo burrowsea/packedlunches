@@ -28,8 +28,8 @@ description TEXT,
 allergyinfo VARCHAR(255),
 category VARCHAR(50) FOREIGN KEY,
 available BOOLEAN,
-quantity INT(3))"
+quantity INT(3) UNSIGNED)"
 );
 $stmt->execute();
 $stmt->closeCursor();
-echo("tblitema created");
+echo("tblitems created");
