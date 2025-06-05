@@ -22,7 +22,7 @@ echo("tblusers created");
 
 $stmt = $conn->prepare("DROP TABLE IF EXISTS categories;
 CREATE TABLE categories
-(catname VARCHAR(40))"
+(catname VARCHAR(40) PRIMARY KEY)"
 );
 $stmt->execute();
 $stmt->closeCursor();
